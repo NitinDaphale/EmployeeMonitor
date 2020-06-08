@@ -4,7 +4,9 @@ export default ({ addEmployee }) => {
   const [employee, setEmployee] = useState({
     name: "nitin",
     email: "test@gmail.com",
-    phone: ""
+    phone: "",
+    gender: "male",
+    fooOptions: "Veg"
   });
 
   const onChange = e => {
@@ -16,7 +18,10 @@ export default ({ addEmployee }) => {
     else if (target === "email") newEmp.email = newValue;
     else if (target === "phone") newEmp.phone = newValue;
     else if (target === "gender") newEmp.gender = newValue;
+    else if (target === "foodOptions") newEmp.foodOptions = newValue;
+
     setEmployee(newEmp);
+    console.log(newEmp);
   };
 
   const validateForm = emp => {
@@ -81,6 +86,13 @@ export default ({ addEmployee }) => {
         <input type="radio" value="Female" name="gender" /> Female
         <input type="radio" value="Other" name="gender" /> Other
       </div>
+      <br />
+      <br />
+      <select value="Veg" name="foodOptions" onChange={onChange}>
+        <option value="Veg">Veg</option>
+        <option value="NonVeg">NonVeg</option>
+        <option value="Eggetarian">Eggetarian</option>
+      </select>
       <br />
       <br />
       <button onClick={onAddClick}>ADD</button>
