@@ -5,7 +5,7 @@ export default ({ addEmployee }) => {
     name: "nitin",
     email: "test@gmail.com",
     phone: "",
-    gender: "male",
+    gender: "Male",
     fooOptions: "Veg"
   });
 
@@ -21,7 +21,6 @@ export default ({ addEmployee }) => {
     else if (target === "foodOptions") newEmp.foodOptions = newValue;
 
     setEmployee(newEmp);
-    console.log(newEmp);
   };
 
   const validateForm = emp => {
@@ -82,12 +81,14 @@ export default ({ addEmployee }) => {
       <br />
       <br />
       <div onChange={onChange}>
+        Gender
         <input type="radio" value="Male" name="gender" /> Male
         <input type="radio" value="Female" name="gender" /> Female
         <input type="radio" value="Other" name="gender" /> Other
       </div>
       <br />
       <br />
+      Food Options
       <select value="Veg" name="foodOptions" onChange={onChange}>
         <option value="Veg">Veg</option>
         <option value="NonVeg">NonVeg</option>
