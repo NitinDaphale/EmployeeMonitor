@@ -8,6 +8,7 @@ export default ({ employees }) => {
           <th>Name</th>
           <th> PHONE NUMBER</th>
           <th>EMAIL</th>
+          <th>GENDER</th>
         </tr>
       </thead>
       <tbody>
@@ -18,6 +19,7 @@ export default ({ employees }) => {
                 <td>{e.name}</td>
                 <td>{e.email}</td>
                 <td>{e.phone}</td>
+                <td>{e.gender}</td>
               </tr>
             );
           })}

@@ -4,7 +4,7 @@ export default ({ addEmployee }) => {
   const [employee, setEmployee] = useState({
     name: "nitin",
     email: "test@gmail.com",
-    phone: "000000000"
+    phone: ""
   });
 
   const onChange = e => {
@@ -15,7 +15,7 @@ export default ({ addEmployee }) => {
     if (target === "name") newEmp.name = newValue;
     else if (target === "email") newEmp.email = newValue;
     else if (target === "phone") newEmp.phone = newValue;
-
+    else if (target === "gender") newEmp.gender = newValue;
     setEmployee(newEmp);
   };
 
@@ -44,7 +44,7 @@ export default ({ addEmployee }) => {
 
   return (
     <Fragment>
-      Employee List
+      <h1>Employee List</h1>
       <br />
       Name{" "}
       <input
@@ -74,6 +74,13 @@ export default ({ addEmployee }) => {
         value={employee.phone}
         onChange={onChange}
       />
+      <br />
+      <br />
+      <div onChange={onChange}>
+        <input type="radio" value="Male" name="gender" /> Male
+        <input type="radio" value="Female" name="gender" /> Female
+        <input type="radio" value="Other" name="gender" /> Other
+      </div>
       <br />
       <br />
       <button onClick={onAddClick}>ADD</button>
