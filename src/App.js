@@ -19,9 +19,8 @@ export default function App() {
 
   return (
     <div>
-      {/* {addFlag && <button onClick={addEmpClick}>ADD EMP</button>} */}
       {<Employee addEmployee={addEmployee} />}
-      {employeeList && employeeList.length && (
+      {employeeList && employeeList.length > 0 && (
         <Employees employees={employeeList} />
       )}
     </div>
