@@ -18,7 +18,7 @@ export default ({ addEmployee }) => {
     else if (target === "email") newEmp.email = newValue;
     else if (target === "phone") newEmp.phone = newValue;
     else if (target === "gender") newEmp.gender = newValue;
-    else if (target === "foodOptions") newEmp.foodOptions = newValue;
+    else if (target === "foodOption") newEmp.foodOption = newValue;
 
     setEmployee(newEmp);
   };
@@ -82,21 +82,21 @@ export default ({ addEmployee }) => {
       <br />
       <div onChange={onChange}>
         Gender
-        <input type="radio" value="Male" name="gender" /> Male
+        <input checked type="radio" value="Male" name="gender" /> Male
         <input type="radio" value="Female" name="gender" /> Female
         <input type="radio" value="Other" name="gender" /> Other
       </div>
       <br />
       <br />
       Food Options
-      <select value="Veg" name="foodOptions" onChange={onChange}>
+      <select value={employee.foodOption} name="foodOption" onChange={onChange}>
         <option value="Veg">Veg</option>
         <option value="NonVeg">NonVeg</option>
         <option value="Eggetarian">Eggetarian</option>
       </select>
       <br />
       <br />
-      <button onClick={onAddClick}>ADD</button>
+      <button onClick={onAddClick}>ADD EMPLOYEE</button>
     </Fragment>
   );
 };

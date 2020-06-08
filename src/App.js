@@ -4,17 +4,11 @@ import Employees from "./Employees";
 import Employee from "./Employee";
 
 export default function App() {
-  const [addFlag, setAddFlag] = useState(true);
   const [employeeList, setEmployees] = useState([]);
 
   const addEmployee = employee => {
-    setAddFlag(false);
     const newList = [...employeeList, employee];
     setEmployees(newList);
-  };
-
-  const addEmpClick = () => {
-    setAddFlag(true);
   };
 
   return (

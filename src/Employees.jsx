@@ -21,7 +21,7 @@ export default ({ employees }) => {
                 <td>{e.email}</td>
                 <td>{e.phone}</td>
                 <td>{e.gender}</td>
-                <td>{e.foodOptions}</td>
+                <td>{e.foodOption}</td>
               </tr>
             );
           })}
